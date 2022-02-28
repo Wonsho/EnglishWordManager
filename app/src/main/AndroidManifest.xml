@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EnglishWordManager">
         <activity
+            android:name=".english_setting.SettingWordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".english_setting.SettingEnglishTestActivity"
+            android:exported="true" />
+        <activity
+            android:name=".english_test.EnglishTestActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
