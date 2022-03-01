@@ -6,17 +6,33 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Word {
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     @NonNull
-    public int wordId;
-
-    public String korean;
     public String english;
-    public String listCode;
-    public int correctTimes;
-    public Word(String korean, String english, String listCode) {
+    public String korean;
+    public String listName;
+    private int correctTimes;
+    private int testTimes;
+    public Word(String korean, String english, String listName) {
         this.korean = korean;
         this.english = english;
-        this.listCode = listCode;
+        this.listName = listName;
     }
+
+    public int getCorrectTimes() {
+        return correctTimes;
+    }
+
+    public int getTestTimes() {
+        return testTimes;
+    }
+
+    public void setCorrectTimes(int correctTimes) {
+        this.correctTimes = correctTimes;
+    }
+
+    public void setTestTimes(int testTimes) {
+        this.testTimes = testTimes;
+    }
+
 }

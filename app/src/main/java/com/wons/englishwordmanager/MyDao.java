@@ -28,10 +28,9 @@ public interface MyDao {
     @Update
     void upDateWordList(WordList wordList);
 
-    @Query("SELECT * FROM word WHERE wordId = :listId")
-    Word[] getWordById(String listId);
+    @Query("SELECT * FROM word WHERE listName = :listName")
+    Word[] getWordInList(String listName);
 
-    @Query("SELECT * FROM wordlist WHERE date = :date")
-    WordList[] getList(String date);
-
+    @Query("SELECT * FROM WordList")
+    WordList[] getWordList();
 }
