@@ -14,7 +14,7 @@ public class Word {
     public String english;
     public String listCode;
     public int correctTimes;
-    Word(String korean, String english, String listCode) {
+    public Word(String korean, String english, String listCode) {
         this.korean = korean;
         this.english = english;
         this.listCode = listCode;

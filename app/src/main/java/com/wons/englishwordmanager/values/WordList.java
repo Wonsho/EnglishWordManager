@@ -10,8 +10,15 @@ public class WordList {
     @NonNull
     public int listId;
     public String date;
+    public int passedCount = 0;
+    public int testCount = 0;
 
-    WordList(String date) {
+    public WordList(String date) {
         this.date = date;
+    }
+
+    public void clearCount() {
+        this.passedCount = 0;
+        this.testCount = 0;
     }
 }

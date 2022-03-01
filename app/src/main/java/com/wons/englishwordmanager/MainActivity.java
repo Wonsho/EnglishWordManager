@@ -1,5 +1,6 @@
 package com.wons.englishwordmanager;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,6 +10,7 @@ import android.view.View;
 import com.wons.englishwordmanager.databinding.ActivityMainBinding;
 import com.wons.englishwordmanager.english_setting.SettingEnglishTestActivity;
 import com.wons.englishwordmanager.english_test.EnglishTestActivity;
+import com.wons.englishwordmanager.study.StudyActivity;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -29,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), SettingEnglishTestActivity.class));
+            }
+        });
+        binding.btnStudy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), StudyActivity.class));
             }
         });
     }

@@ -9,7 +9,7 @@
 <TextView
     android:textColor="@color/black"
     android:textStyle="bold"
-    android:textSize="30sp"
+    android:textSize="45sp"
     android:gravity="center"
     android:text="English Word \n Manager"
     app:layout_constraintBottom_toBottomOf="@id/guidelineV1"
@@ -26,28 +26,45 @@
         app:layout_constraintBottom_toBottomOf="@id/guidelineV2"
         app:layout_constraintTop_toTopOf="@id/guidelineV1"
         android:layout_width="0dp"
-        android:layout_height="0dp"/>
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"/>
 
     <Button
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:id="@+id/btn_test"
         android:layout_marginTop="20dp"
         android:textSize="15sp"
-        android:layout_marginLeft="30dp"
-        app:layout_constraintBottom_toTopOf="@id/guidelineV3"
-        app:layout_constraintLeft_toLeftOf="@id/guidelineH"
+        app:layout_constraintBottom_toTopOf="@id/btn_setting"
         android:text="시험 보기"
-        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:id="@+id/btn_setting"
         android:textSize="15sp"
-        android:layout_marginRight="30dp"
         app:layout_constraintBottom_toTopOf="@id/guidelineV3"
-        app:layout_constraintRight_toLeftOf="@id/guidelineH"
-        android:text="시험 수정"
-        android:layout_width="wrap_content"
+        android:text="단어 추가"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <Button
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/btn_study"
+        android:textSize="15sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_test"
+        android:text="단어 공부"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
     <TextView
         android:textColor="@color/black"
@@ -87,5 +104,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.93" />
 </androidx.constraintlayout.widget.ConstraintLayout>

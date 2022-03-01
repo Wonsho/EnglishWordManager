@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/wono9/AndroidStudioProjects/EnglishWordManager/app/src/main/res/drawable/ic_alphabet_6000173.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/wono9/AndroidStudioProjects/EnglishWordManager/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/wono9/AndroidStudioProjects/EnglishWordManager/app/src/main/res/layout/activity_english_test.xml" value="0.2" />
+        <entry key="..\:/Users/wono9/AndroidStudioProjects/EnglishWordManager/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Users/wono9/AndroidStudioProjects/EnglishWordManager/app/src/main/res/layout/activity_setting_english_test.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/wono9/AndroidStudioProjects/EnglishWordManager/app/src/main/res/layout/activity_setting_word.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/wono9/AndroidStudioProjects/EnglishWordManager/app/src/main/res/layout/activity_study.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/wono9/AndroidStudioProjects/EnglishWordManager/app/src/main/res/layout/word_setting_list_view.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/wono9/AndroidStudioProjects/EnglishWordManager/app/src/main/res/layout/word_test_list_view.xml" value="0.264" />
         <entry key="..\:/Users/wono9/AndroidStudioProjects/EnglishWordManager/app/src/main/res/layout/word_view.xml" value="0.536" />

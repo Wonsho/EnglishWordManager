@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EnglishWordManager">
         <activity
+            android:name=".study.StudyActivity"
+            android:exported="true" />
+        <activity
             android:name=".english_setting.SettingWordActivity"
             android:exported="true" />
         <activity
