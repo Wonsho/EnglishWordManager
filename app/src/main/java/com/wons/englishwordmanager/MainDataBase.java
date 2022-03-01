@@ -9,5 +9,5 @@ import com.wons.englishwordmanager.values.WordList;
 
 @Database(entities = {WordList.class, Word.class}, version = 1)
 public abstract class MainDataBase extends RoomDatabase {
-    abstract MyDao getDao();
+    abstract public MyDao getDao();
 }

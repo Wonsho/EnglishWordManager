@@ -72,28 +72,7 @@
             android:textColor="@color/black"
             android:textSize="15sp" />
 
-        <TextView
 
-            android:id="@+id/tv_english"
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:background="@color/purple_500" />
-
-        <TextView
-            android:id="@+id/tv_correctCount"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:text="맞은횟수/시도횟수"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
     </LinearLayout>
     <TextView
         android:id="@+id/tv"

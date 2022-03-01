@@ -6,12 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
 import com.wons.englishwordmanager.R;
 import com.wons.englishwordmanager.values.WordList;
-
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class SettingEnglishTestAdapter extends BaseAdapter {
     private ArrayList<WordList> wordLists;
@@ -26,7 +23,7 @@ public class SettingEnglishTestAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int i) {
+    public WordList getItem(int i) {
         return wordLists.get(i);
     }
 
@@ -49,5 +46,9 @@ public class SettingEnglishTestAdapter extends BaseAdapter {
         ((TextView)view.findViewById(R.id.tv_test_name)).setText(wordLists.get(i).listName);
         ((TextView)view.findViewById(R.id.tv_wordCount)).setText(String.valueOf(wordLists.get(i).getWordCount()));
         return view;
+    }
+
+    public void setWordLists(ArrayList<WordList> wordLists) {
+        this.wordLists = wordLists;
     }
 }
