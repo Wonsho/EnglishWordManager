@@ -19,6 +19,7 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/tv_english"
                 android:textSize="20sp"
                 android:textColor="@color/white"
                 android:text="English"
@@ -28,7 +29,6 @@
                 android:paddingTop="5dp"/>
 
             <TextView
-                android:id="@+id/tv_english"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:background="@color/white"

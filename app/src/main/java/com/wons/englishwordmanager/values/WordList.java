@@ -6,8 +6,9 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class WordList {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @NonNull
+    public int listId;
     public String listName;
     private int wordCount = 0;
     private int passedCount = 0;

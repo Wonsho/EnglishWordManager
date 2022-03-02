@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ import com.wons.englishwordmanager.english_setting.dialog.SettingDialogCallBack;
 import com.wons.englishwordmanager.english_setting.dialog.SettingDialogs;
 import com.wons.englishwordmanager.english_setting.dialog.SettingEnum;
 import com.wons.englishwordmanager.english_setting.dialog.WordEnum;
+import com.wons.englishwordmanager.values.Word;
 import com.wons.englishwordmanager.values.WordList;
 
 import java.util.ArrayList;
@@ -37,7 +39,6 @@ public class SettingEnglishTestActivity extends AppCompatActivity {
         viewModel = new ViewModelProvider(this).get(SettingEnglishTestActivityViewModel.class);
         setView();
         onc();
-        viewModel.setDataBaseBuild(getApplicationContext());
         getListData();
     }
 
@@ -61,7 +62,7 @@ public class SettingEnglishTestActivity extends AppCompatActivity {
                     }
                 });
                 alertDialog.show();
-                return false;
+                return true;
             }
         });
 
@@ -92,9 +93,21 @@ public class SettingEnglishTestActivity extends AppCompatActivity {
                 break;
             }
             case REPLACE: {
-                //todo 수정하는 다이로그 띄우기
-                viewModel.updateWordList(list);
-                getListData();
+                AlertDialog alertDialog = new SettingDialogs().getReplaceListName(SettingEnglishTestActivity.this, new SettingCallBackString() {
+                    @Override
+                    public void callback(String title) {
+                        String originTitle = list.listName;
+                        list.listName = title;
+                       int i =  viewModel.updateWordList(list,originTitle);
+                       if(i == -1) {
+                           Toast.makeText(getApplicationContext(), "중복되는 리스트가 있습니다", Toast.LENGTH_SHORT).show();
+                       } else  {
+                           Toast.makeText(getApplicationContext(), "수정되었습니다", Toast.LENGTH_SHORT).show();
+                       }
+                        getListData();
+                    }
+                });
+                alertDialog.show();
                 break;
             }
         }
@@ -113,7 +126,17 @@ public class SettingEnglishTestActivity extends AppCompatActivity {
         ((SettingEnglishTestAdapter)binding.lv.getAdapter()).notifyDataSetChanged();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.e("Setting", "onDestroy");
+    }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.e("Setting", "onRestart");
+        getListData();
 
-
+    }
 }

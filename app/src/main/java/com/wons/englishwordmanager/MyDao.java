@@ -36,4 +36,7 @@ public interface MyDao {
 
     @Query("SELECT * FROM WordList WHERE listName = :listName")
     WordList getWordList(String listName);
+
+    @Query("SELECT * FROM (SELECT * FROM word WHERE listName = :listName) WHERE english = :english")
+    Word searchWord(String listName, String english);
 }

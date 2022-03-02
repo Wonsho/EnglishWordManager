@@ -6,8 +6,9 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Word {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @NonNull
+    public int wordId;
     public String english;
     public String korean;
     public String listName;
